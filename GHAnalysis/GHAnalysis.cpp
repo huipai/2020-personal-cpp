@@ -43,7 +43,6 @@ int main(int argc, char* argv[])
 		if (opt == 'i')
 		{
 			initFile(argv);
-			printf("初始化完成");
 			return 0;
 		}
 		else if (opt == 'u')
@@ -87,7 +86,6 @@ int search(int type, string actor_login, string repo_name, string  event_type)
 	}
 	else
 	{
-		cout << "参数输入有误，请检查参数" << endl;
 		exit(-1);
 	}
 	ifstream fin(in_name);
@@ -212,7 +210,6 @@ void initFile(char* argv[])
 	intptr_t handle;
 	if ((handle = _findfirst(curr.c_str(), &fileinfo)) == -1)
 	{
-		cout << "没有找到匹配文件，初始化失败！" << endl;
 		return;
 	}
 	else
@@ -267,7 +264,7 @@ void initFile(char* argv[])
 		ofile.close();
 		_findclose(handle);
 	}
-}*/
+}
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 
