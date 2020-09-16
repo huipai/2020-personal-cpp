@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 	char stri[] = "i::u::r::e::";
 	char* str = stri;
 	int type = 0;
-	/*static struct xoption long_options[] =
+	static struct xoption long_options[] =
 	{
 		{"user", xrequired_argument,NULL, 'u'},
 		{"repo", xrequired_argument,NULL, 'r'},
@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 	{
 		if (opt == 'i')
 		{
-			initFile(argv);
+			//initFile(argv);
 			return 0;
 		}
 		else if (opt == 'u')
@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
 			event_type = xoptarg;
 		}
 	}
-	cout << search(type, actor_login, repo_name, event_type);*/
+	//cout << search(type, actor_login, repo_name, event_type);
 	return 0;
 }
 /*int search(int type, string actor_login, string repo_name, string  event_type)
