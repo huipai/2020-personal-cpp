@@ -19,8 +19,8 @@ using namespace std;
 /*void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
 	unordered_map<string, int>& map_user_event, unordered_map<string, int>& map_repo_event, unordered_map<string, int>& map_user_repo_event);
 int search(int type, string actor_login, string repo_name, string  event_type);
-string get_work_path();
-void initFile(char* argv[]);*/
+string get_work_path();*/
+void initFile(char* argv[]);
 int main(int argc, char* argv[])
 {
 	string actor_login;
@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 	{
 		if (opt == 'i')
 		{
-			//initFile(argv);
+			initFile(argv);
 			return 0;
 		}
 		else if (opt == 'u')
@@ -189,7 +189,7 @@ void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
 	}
 	fin.close();
 	delete temp;
-}
+}*/
 string get_work_path()
 {
 	char path_char[300];
@@ -215,12 +215,12 @@ void initFile(char* argv[])
 	else
 	{
 		ofstream ofile;
-		GetLineAndSave(in_path, work_path, fileinfo.name,
-			map_user_event, map_repo_event, map_user_repo_event);
+//		GetLineAndSave(in_path, work_path, fileinfo.name,
+	///		map_user_event, map_repo_event, map_user_repo_event);
 		while (!(_findnext(handle, &fileinfo)))
 		{
-			GetLineAndSave(in_path, work_path, fileinfo.name,
-				map_user_event, map_repo_event, map_user_repo_event);
+//			GetLineAndSave(in_path, work_path, fileinfo.name,
+	//			map_user_event, map_repo_event, map_user_repo_event);
 		}
 		ofile.open(work_path + "\\1.json");
 		unordered_map<string, int>::iterator iter;
@@ -274,4 +274,4 @@ void initFile(char* argv[])
 //   3. 使用输出窗口查看生成输出和其他消息
 //   4. 使用错误列表窗口查看错误
 //   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件*/
+//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
