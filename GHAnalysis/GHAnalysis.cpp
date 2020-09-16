@@ -16,11 +16,11 @@
 
 using namespace std;
 
-void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
+/*void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
 	unordered_map<string, int>& map_user_event, unordered_map<string, int>& map_repo_event, unordered_map<string, int>& map_user_repo_event);
 int search(int type, string actor_login, string repo_name, string  event_type);
 string get_work_path();
-void initFile(char* argv[]);
+void initFile(char* argv[]);*/
 int main(int argc, char* argv[])
 {
 	string actor_login;
@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 	char stri[] = "i::u::r::e::";
 	char* str = stri;
 	int type = 0;
-	static struct xoption long_options[] =
+	/*static struct xoption long_options[] =
 	{
 		{"user", xrequired_argument,NULL, 'u'},
 		{"repo", xrequired_argument,NULL, 'r'},
@@ -60,10 +60,10 @@ int main(int argc, char* argv[])
 			event_type = xoptarg;
 		}
 	}
-	cout << search(type, actor_login, repo_name, event_type);
+	cout << search(type, actor_login, repo_name, event_type);*/
 	return 0;
 }
-int search(int type, string actor_login, string repo_name, string  event_type)
+/*int search(int type, string actor_login, string repo_name, string  event_type)
 {
 	int count = 0;
 	string work_path = get_work_path();
@@ -274,4 +274,4 @@ void initFile(char* argv[])
 //   3. 使用输出窗口查看生成输出和其他消息
 //   4. 使用错误列表窗口查看错误
 //   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件*/
