@@ -7,7 +7,6 @@
 #include<map>
 #include <stdlib.h>
 #include <direct.h>
-#include<unistd.h>
 #include <sstream>
 #include<vector>
 #include <unordered_map> 
@@ -22,7 +21,6 @@ void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
 int search(int type, string actor_login, string repo_name, string  event_type);
 string get_work_path();
 void initFile(char* argv[]);
-int find_n(int begi, char* tempdata);
 int main(int argc, char* argv[])
 {
 	string actor_login;
@@ -65,15 +63,6 @@ int main(int argc, char* argv[])
 	}
 	cout << search(type, actor_login, repo_name, event_type);
 	return 0;
-}
-int find_n(int begi, char* tempdata)
-{
-	for (; tempdata[begi] != '\n'; begi++)
-	{
-		;
-	}
-	begi++;
-	return begi;
 }
 int search(int type, string actor_login, string repo_name, string  event_type)
 {
@@ -278,7 +267,7 @@ void initFile(char* argv[])
 		ofile.close();
 		_findclose(handle);
 	}
-}
+}*/
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 
