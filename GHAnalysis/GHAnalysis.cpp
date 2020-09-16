@@ -116,7 +116,7 @@ int main(int argc, char* argv[])
 	cJSON_Delete(cJson_test);
 	fin.close();
 	return count;
-}
+}*/
 void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
 	unordered_map<string, int>& map_user_event, unordered_map<string, int>& map_repo_event, unordered_map<string, int>& map_user_repo_event)
 {
@@ -189,7 +189,7 @@ void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
 	}
 	fin.close();
 	delete temp;
-}*/
+}
 string get_work_path()
 {
 	char path_char[300];
@@ -215,12 +215,12 @@ void initFile(char* argv[])
 	else
 	{
 		ofstream ofile;
-//		GetLineAndSave(in_path, work_path, fileinfo.name,
-	///		map_user_event, map_repo_event, map_user_repo_event);
+		GetLineAndSave(in_path, work_path, fileinfo.name,
+			map_user_event, map_repo_event, map_user_repo_event);
 		while (!(_findnext(handle, &fileinfo)))
 		{
-//			GetLineAndSave(in_path, work_path, fileinfo.name,
-	//			map_user_event, map_repo_event, map_user_repo_event);
+			GetLineAndSave(in_path, work_path, fileinfo.name,
+				map_user_event, map_repo_event, map_user_repo_event);
 		}
 		ofile.open(work_path + "\\1.json");
 		unordered_map<string, int>::iterator iter;
