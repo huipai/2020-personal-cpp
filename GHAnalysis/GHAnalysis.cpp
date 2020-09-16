@@ -66,7 +66,7 @@ int main(int argc, char* argv[])
 int search(int type, string actor_login, string repo_name, string  event_type)
 {
 	int count = 0;
-	/*string work_path = get_work_path();
+	string work_path = get_work_path();
 	string in_name;
 	string search_object;
 	if (type == 1)
@@ -86,7 +86,7 @@ int search(int type, string actor_login, string repo_name, string  event_type)
 	}
 	else
 	{
-		exit(-1);
+		return 0;
 	}
 	ifstream fin(in_name);
 	if (!fin)
@@ -114,7 +114,7 @@ int search(int type, string actor_login, string repo_name, string  event_type)
 		}
 	}
 	cJSON_Delete(cJson_test);
-	fin.close();*/
+	fin.close();
 	return count;
 }
 void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
