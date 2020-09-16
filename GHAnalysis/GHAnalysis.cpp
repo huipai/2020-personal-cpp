@@ -16,10 +16,10 @@
 
 using namespace std;
 
-/*void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
+void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
 	unordered_map<string, int>& map_user_event, unordered_map<string, int>& map_repo_event, unordered_map<string, int>& map_user_repo_event);
 int search(int type, string actor_login, string repo_name, string  event_type);
-string get_work_path();*/
+string get_work_path();
 void initFile(char* argv[]);
 int main(int argc, char* argv[])
 {
@@ -60,13 +60,13 @@ int main(int argc, char* argv[])
 			event_type = xoptarg;
 		}
 	}
-	//cout << search(type, actor_login, repo_name, event_type);
+	cout << search(type, actor_login, repo_name, event_type);
 	return 0;
 }
-/*int search(int type, string actor_login, string repo_name, string  event_type)
+int search(int type, string actor_login, string repo_name, string  event_type)
 {
 	int count = 0;
-	string work_path = get_work_path();
+	/*string work_path = get_work_path();
 	string in_name;
 	string search_object;
 	if (type == 1)
@@ -114,9 +114,9 @@ int main(int argc, char* argv[])
 		}
 	}
 	cJSON_Delete(cJson_test);
-	fin.close();
+	fin.close();*/
 	return count;
-}*/
+}
 void GetLineAndSave(string in_path, string work_path, string fileinfo_name,
 	unordered_map<string, int>& map_user_event, unordered_map<string, int>& map_repo_event, unordered_map<string, int>& map_user_repo_event)
 {
