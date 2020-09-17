@@ -24,12 +24,18 @@
     <ClCompile Include="xgetopt.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ofstr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cJSON.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="xgetopt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ofstr.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
